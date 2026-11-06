@@ -1,0 +1,5 @@
+{
+  "_note": "Lọc nội dung. 'plain' so với comment đã bỏ dấu (chỉ dùng cho từ viết tắt không trùng từ thường). 'accented' so với comment chữ thường CÒN dấu (vì bỏ dấu sẽ trùng từ thường như 'các', 'lớn'). Comment dính từ cấm sẽ không hiện bong bóng; tên dính từ cấm bị thay bằng 'Khách'.",
+  "plain": ["dm", "dmm", "dcm", "vcl", "vkl", "vl", "cmm", "clm", "dkm", "occho", "oc cho", "dit me", "du ma"],
+  "accented": ["lồn", "cặc", "buồi", "địt", "đéo", "đụ", "óc chó", "ngu"]
+}

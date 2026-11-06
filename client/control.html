@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bữa Cơm — Bảng điều khiển</title>
+  <link rel="stylesheet" href="/src/control/control.css" />
+</head>
+<body>
+  <aside>
+    <header class="top">
+      <div class="brand">🍚 <b>BỮA CƠM TÌNH NGHĨA</b><small>BẢNG ĐIỀU KHIỂN LIVE</small></div>
+      <div class="pill" id="livePill"><i></i><span>CHƯA KẾT NỐI</span></div>
+    </header>
+
+    <div class="grid">
+      <section>
+        <div class="label">01 / KẾT NỐI TIKTOK LIVE</div>
+        <input id="username" placeholder="@ten_kenh hoặc link tiktok.com/@ten_kenh/live" autocomplete="off" />
+        <div class="buttons">
+          <button id="connect" class="primary">● Kết nối live</button>
+          <button id="disconnect">■ Ngắt</button>
+        </div>
+        <p id="liveState" class="state">Chưa kết nối</p>
+        <p class="hint">Chỉ bấm khi kênh <b>đang live</b>. Tự kết nối lại khi rớt (5 → 10 → 20 → 30 giây). Không dùng mật khẩu hay cookie. Thư viện kết nối không chính thức, có thể lỗi khi TikTok thay đổi.</p>
+      </section>
+
+      <section>
+        <div class="label">02 / MÀN HÌNH LIVE 9:16</div>
+        <button id="openLive" class="wide primary">↗ Mở cửa sổ live 9:16</button>
+        <div class="copyrow"><code id="obsUrl"></code><button id="copyUrl" title="Sao chép">⧉</button></div>
+        <p class="hint"><b>TikTok LIVE Studio:</b> chạy <code>OPEN-LIVE-WINDOW.bat</code> rồi thêm nguồn "Cửa sổ" (không cần cắt).<br><b>OBS:</b> Browser Source với link trên, 1080 × 1920. Không bật "Shutdown source when not visible".</p>
+      </section>
+
+      <section>
+        <div class="label">03 / SỰ KIỆN</div>
+        <div id="eventNow" class="eventNow idle">Không có sự kiện</div>
+        <div class="buttons">
+          <button data-event="chao">🥣 Bát cháo</button>
+          <button data-event="payment">💸 Thanh toán</button>
+          <button data-event="photo">📸 Chụp ảnh</button>
+        </div>
+        <div class="buttons">
+          <button data-event="toast">🎤 Phát biểu</button>
+          <button data-event="oldvoice">👴 Giọng ông cụ</button>
+          <button data-event="quang">🗣 Quang</button>
+        </div>
+        <div class="buttons">
+          <button data-event="ga">🍗 Gà xé</button>
+          <button data-event="headache">😵‍💫 Đau đầu</button>
+        </div>
+        <button id="eventStop" class="wide">■ Kết thúc sự kiện ngay</button>
+        <div class="two">
+          <label class="check"><input id="director" type="checkbox" /> Tự động mở sự kiện</label>
+          <label class="field"><span>Cách nhau</span>
+            <select id="gap">
+              <option value="60">1 phút</option><option value="90">1,5 phút</option><option value="120">2 phút</option>
+              <option value="180">3 phút</option><option value="300">5 phút</option>
+            </select>
+          </label>
+        </div>
+        <p id="nextEvent" class="hint"></p>
+      </section>
+
+      <section>
+        <div class="label">04 / CHỦ TIỆC</div>
+        <div class="saybox">
+          <input id="sayText" placeholder="Gõ câu cho chủ tiệc nói…" maxlength="160" />
+          <button id="say" class="primary">Nói</button>
+        </div>
+        <div class="two">
+          <label class="field"><span>Tên chủ tiệc</span><input id="hostName" maxlength="24" /></label>
+          <label class="field"><span>Biển cổng (địa chỉ hư cấu)</span><input id="venueName" maxlength="32" /></label>
+        </div>
+        <div class="two">
+          <label class="field"><span>Số câu nói / phút: <b id="spmVal"></b></span><input id="spm" type="range" min="2" max="12" /></label>
+          <label class="field"><span>Tự về sau (phút)</span><input id="afk" type="number" min="1" max="60" /></label>
+        </div>
+        <label class="check"><input id="discShow" type="checkbox" /> Hiện nhãn parody / AI trên màn hình live (khuyên bật)</label>
+        <input id="discText" class="mt" maxlength="120" />
+        <div class="label mt">NPC HƯ CẤU</div>
+        <div class="buttons">
+          <button id="callQuang">🕶 Gọi chú Quang</button>
+          <button id="callChuc">🥢 Gọi chú Chực</button>
+        </div>
+        <label class="check"><input id="quangOnCall" type="checkbox" /> Chat "quang ơi" → chú Quang ghé mâm (tối đa 1 lần / 3 phút)</label>
+        <label class="check"><input id="chucEnabled" type="checkbox" /> Chú Chực tự đi xin ăn giữa các sự kiện (4–6 phút / lần)</label>
+        <div class="two">
+          <label class="field"><span>Giọng Quang — tốc độ: <b id="qRateVal"></b></span><input id="qRate" type="range" min="-30" max="30" step="2" /></label>
+          <label class="field"><span>Giọng Quang — cao độ: <b id="qPitchVal"></b></span><input id="qPitch" type="range" min="-30" max="30" step="2" /></label>
+        </div>
+        <p class="hint">Trong app TikTok cũng nên bật nhãn <b>"Nội dung do AI tạo"</b> cho buổi live, vì giọng chủ tiệc là giọng AI.</p>
+      </section>
+
+      <section>
+        <div class="label">05 / THỬ TƯƠNG TÁC</div>
+        <div class="two">
+          <input id="simNick" value="Tester" maxlength="18" placeholder="Tên" />
+          <input id="simText" placeholder="Comment, Enter để gửi" />
+        </div>
+        <div class="chips">
+          <button data-say="nhập tiệc">nhập tiệc</button><button data-say="mâm 5">mâm 5</button>
+          <button data-say="ăn cơm">ăn cơm</button><button data-say="bát cháo">bát cháo</button>
+          <button data-say="em trả">em trả</button><button data-say="chụp ảnh">chụp ảnh</button>
+          <button data-say="quang ơi">quang ơi</button><button data-say="mâm em hết cơm rồi">hết cơm</button>
+          <button data-say="phát biểu">phát biểu</button><button data-say="2">2</button>
+          <button data-say="món gà nhìn ngon thế">(AI) khen ngon</button><button data-say="cho em sang bàn 7 với">(AI) sang bàn 7</button>
+          <button data-say="ra về">ra về</button>
+        </div>
+        <div class="botrow"><span>Bot giả lập</span>
+          <button data-bots="0">0</button><button data-bots="20">20</button><button data-bots="60">60</button><button data-bots="150">150</button>
+          <b id="botCount"></b>
+        </div>
+      </section>
+
+      <section>
+        <div class="label">06 / SÂN TIỆC</div>
+        <div class="stats">
+          <div><b id="stGuests">0</b><span>đang ngồi</span></div>
+          <div><b id="stWaiting">0</b><span>đứng chờ</span></div>
+          <div><b id="stChat">0</b><span>comment/10s</span></div>
+        </div>
+        <div class="heatRow"><span>🔥 Độ náo nhiệt</span><div class="heatBar"><i id="heatFill"></i></div><b id="heatVal">0 · Vắng</b></div>
+        <div id="tables" class="tables"></div>
+        <button id="reset" class="wide danger">↻ Dọn sân · bữa tiệc mới</button>
+      </section>
+
+      <section>
+        <div class="label">08 / GIỌNG CHỦ TIỆC</div>
+        <div class="two">
+          <label class="field"><span>Nhà cung cấp</span>
+            <select id="ttsProvider">
+              <option value="edge">Edge — miễn phí, không cần key</option>
+              <option value="google">Google Cloud TTS</option>
+              <option value="fpt">FPT.AI</option>
+              <option value="elevenlabs">ElevenLabs (giọng có sẵn)</option>
+              <option value="browser">Trình duyệt (giọng của Windows)</option>
+              <option value="off">Tắt tiếng (chỉ hiện chữ)</option>
+            </select>
+          </label>
+          <label class="field"><span id="voiceLabel">Giọng</span><input id="ttsVoice" list="voiceList" placeholder="mặc định" /><datalist id="voiceList"></datalist></label>
+        </div>
+        <div class="two">
+          <label class="field"><span>Tốc độ: <b id="rateVal"></b></span><input id="ttsRate" type="range" min="-40" max="40" step="2" /></label>
+          <label class="field"><span>Cao độ (trầm ↔ cao): <b id="pitchVal"></b></span><input id="ttsPitch" type="range" min="-30" max="30" step="2" /></label>
+        </div>
+        <div id="ttsKeyRow" class="keyrow">
+          <input id="ttsKey" type="password" autocomplete="off" placeholder="API key" />
+          <button id="ttsKeySave">Lưu key</button>
+          <span id="ttsKeyState" class="keystate"></span>
+        </div>
+        <div class="saybox mt">
+          <input id="ttsTestText" value="Anh em mình đến với nhau bằng cái tình cảm!" maxlength="200" />
+          <button id="ttsTest" class="primary">▶ Nghe thử</button>
+          <button id="ttsTestOld" title="Thử với hiệu ứng giọng ông cụ">👴</button>
+        </div>
+        <p id="ttsState" class="state"></p>
+        <div class="buttons">
+          <button id="ttsPrerender">⤓ Render sẵn thư viện thoại</button>
+          <button id="ttsClear">🗑 Xoá cache</button>
+        </div>
+        <div class="two">
+          <label class="field"><span>Âm lượng giọng: <b id="volVal"></b></span><input id="voiceVol" type="range" min="0" max="100" /></label>
+          <label class="field"><span><label class="inline"><input id="ambience" type="checkbox" /> Tiếng nền tiệc</label>: <b id="ambVal"></b></span><input id="ambVol" type="range" min="0" max="100" /></label>
+        </div>
+        <p class="hint">Dùng <b>giọng có sẵn</b> của nhà cung cấp rồi chỉnh tốc độ/cao độ cho ra chất "anh cả bàn nhậu". Dự án không clone giọng người thật. Key lưu trong <code>secrets.json</code> trên máy bạn, không gửi lên đâu khác ngoài nhà cung cấp.</p>
+      </section>
+
+      <section>
+        <div class="label">09 / AI HIỂU COMMENT</div>
+        <label class="check"><input id="aiEnabled" type="checkbox" /> Bật tầng 2: comment không khớp lệnh → AI đoán ý</label>
+        <div class="two">
+          <label class="field"><span>Nhà cung cấp</span>
+            <select id="aiProvider">
+              <option value="anthropic">Claude (Anthropic)</option>
+              <option value="openai">OpenAI-compatible (OpenAI, Ollama, Gemini…)</option>
+              <option value="mock">Thử nghiệm (không gọi mạng)</option>
+            </select>
+          </label>
+          <label class="field"><span>Model</span><input id="aiModel" placeholder="claude-haiku-5-5" /></label>
+        </div>
+        <label id="aiBaseRow" class="field mt"><span>Base URL (vd. https://api.openai.com/v1 · http://127.0.0.1:11434/v1)</span><input id="aiBase" /></label>
+        <div id="aiKeyRow" class="keyrow">
+          <input id="aiKey" type="password" autocomplete="off" placeholder="API key" />
+          <button id="aiKeySave">Lưu key</button>
+          <span id="aiKeyState" class="keystate"></span>
+        </div>
+        <label class="field mt"><span>Tối đa số lần gọi / phút: <b id="aiMaxVal"></b> (mỗi lần gom tối đa 15 comment)</span><input id="aiMax" type="range" min="4" max="60" step="2" /></label>
+        <div class="saybox mt">
+          <input id="aiTestText" value="cho em xin sang bàn 4 ngồi với" maxlength="200" />
+          <button id="aiTest">Thử</button>
+        </div>
+        <p id="aiTestOut" class="state"></p>
+        <p id="aiState" class="hint"></p>
+        <p class="hint">AI chỉ trả về <b>mã hành động</b> có sẵn (ăn, đổi mâm, khen ngon…), không tự viết câu cho chủ tiệc → comment bậy hay "lừa AI" không làm nhân vật nói bậy.</p>
+      </section>
+
+      <section class="span2">
+        <div class="label logLabel">11 / CHỈ SỐ PHIÊN LIVE
+          <span id="sessState" class="sessState">Chưa ghi</span>
+        </div>
+        <div class="saybox">
+          <input id="sessLabel" placeholder="Tên phiên (vd. live thử tối thứ 6) — tự ghi khi kết nối live" maxlength="40" />
+          <button id="sessStart" class="primary">● Bắt đầu ghi</button>
+          <button id="sessStop">■ Kết thúc & tạo báo cáo</button>
+        </div>
+        <div id="kpis" class="kpis"></div>
+        <div class="sparks">
+          <div><span>Comment / phút (30 phút gần nhất)</span><svg id="spark1" viewBox="0 0 300 50" preserveAspectRatio="none"></svg></div>
+          <div><span>Khách trong sân</span><svg id="spark2" viewBox="0 0 300 50" preserveAspectRatio="none"></svg></div>
+        </div>
+        <div id="sessReport" class="hint"></div>
+        <div class="label mt">BÁO CÁO CÁC PHIÊN TRƯỚC</div>
+        <div id="sessList" class="sessList"></div>
+        <p class="hint">Tự bắt đầu ghi khi kết nối live; tắt server cũng tự lưu báo cáo. Log nằm trong thư mục <code>sessions/</code>, id người xem đã được băm (không lưu tên).</p>
+      </section>
+
+      <section class="span2">
+        <div class="label logLabel">10 / NHẬT KÝ
+          <span class="filters">
+            <label><input type="checkbox" data-kind="live" checked /> live</label>
+            <label><input type="checkbox" data-kind="event" checked /> sự kiện</label>
+            <label><input type="checkbox" data-kind="gift" checked /> quà</label>
+            <label><input type="checkbox" data-kind="chat" /> comment</label>
+            <label><input type="checkbox" data-kind="system" checked /> hệ thống</label>
+          </span>
+        </div>
+        <div id="log"></div>
+      </section>
+    </div>
+  </aside>
+
+  <main>
+    <div class="stage"><iframe id="preview" title="Xem trước màn hình live"></iframe></div>
+    <p class="hint center">Xem trước (không phát tiếng). <span id="serverState">Đang kết nối server…</span></p>
+  </main>
+
+  <script type="module" src="/src/control/main.ts"></script>
+</body>
+</html>

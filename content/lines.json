@@ -1,0 +1,230 @@
+{
+  "_note": "Thoại của chủ tiệc (nhân vật parody hư cấu). {nick} = tên người xem, {nicks} = danh sách tên, {table} = số mâm. Mỗi nhóm chọn ngẫu nhiên, tránh lặp lại câu vừa nói.",
+  "greet_one": [
+    "{nick} đến rồi à, vào đây vào đây, anh em mình đến với nhau bằng cái tình cảm!",
+    "Ơ {nick}, ngồi mâm {table} nhé em, cơm canh đủ cả!",
+    "{nick} vào đi em, mâm cơm nhỏ thôi nhưng hạnh phúc to!"
+  ],
+  "greet_many": [
+    "Anh em bốn bể về đây cả rồi: {nicks}. Vào mâm đi các em!",
+    "Chào {nicks}! Hôm nay đông vui quá, mở thêm mâm nữa!"
+  ],
+  "visit": [
+    "Mâm {table} ăn uống thế nào rồi? {nick} ăn thêm đi em!",
+    "{nick} ơi, mình ăn bát cơm thì phải cho mình ăn bát cháo, nhớ chưa?",
+    "Mâm {table} vui quá nhỉ! Anh em mình cứ thoải mái nhé.",
+    "{nick} ăn ít thế, gắp thêm miếng gà luộc đi em!",
+    "Không cần mâm cao cỗ đầy, có anh em là vui rồi, đúng không {nick}?"
+  ],
+  "visit_empty": [
+    "Mâm {table} vắng thế, anh em vào ngồi cho ấm cúng đi!"
+  ],
+  "full": [
+    "Hết chỗ rồi {nick} ơi, đứng chờ tí, có ghế là anh gọi ngay!"
+  ],
+  "seat_free": [
+    "Có chỗ rồi {nick}, vào mâm {table} đi em!"
+  ],
+  "leave": [
+    "{nick} về à? Về cẩn thận nhé em, hôm sau lại qua!",
+    "Ơ {nick} về sớm thế, thôi được, anh em mình còn gặp lại!"
+  ],
+  "chao": [
+    "Đúng rồi! Mình ăn bát cơm thì phải cho mình ăn bát cháo. {nick} hiểu chuyện lắm!",
+    "{nick} chia cháo cho cả mâm {table} kìa, tình nghĩa quá!"
+  ],
+  "payment": [
+    "Anh thanh toán rồi, không phải lo đâu em!",
+    "Thôi thôi, để anh! Anh thanh toán rồi, ngồi xuống đi {nick}!",
+    "Ơ hoá đơn này của mâm nào thế? Thôi kệ, anh thanh toán rồi!"
+  ],
+  "quang": [
+    "Quang đã nói thế rồi thì ok đi em!",
+    "{nick} hỏi Quang à? Quang nói thế rồi, ok đi em!"
+  ],
+  "request_food": [
+    "Ơ, mâm {table} chưa có cơm à? Mang thêm ra ngay, anh em về đây là phải ăn uống đầy đủ!",
+    "{nick} đói à? Có ngay có ngay, bê thêm nồi cơm ra mâm {table}!"
+  ],
+  "greet_host": [
+    "Ơi, anh đây {nick}! Ăn uống thoải mái nhé em!",
+    "{nick} gọi anh à? Anh em mình đến với nhau bằng cái tình cảm mà!"
+  ],
+  "beer": [
+    "Một hai ba dô! Mâm {table} nhiệt tình quá!",
+    "Nâng ly nào {nick}! Tình nghĩa anh em là mãi mãi!"
+  ],
+  "old_voice": [
+    "Mày thích giọng ông cụ không? Thôi, hôm nay anh nói giọng bình thường thôi!"
+  ],
+  "headache": [
+    "Nói ít thôi, đau đầu lắm! Từ từ từng người một nào anh em ơi!"
+  ],
+  "quiet": [
+    "Anh sợ nhất là những người âm thầm không nói năng gì cả. Ai đang xem thì chat nhập tiệc vào đây với anh đi!"
+  ],
+  "gift": [
+    "Cảm ơn {nick} nhé! Tình cảm quá, cả sân vỗ tay nào!"
+  ],
+  "idle_stage": [
+    "Mâm cơm nhỏ, hạnh phúc to. Anh em năm châu bốn bể cứ về đây với anh!",
+    "Ai mới vào live thì chat nhập tiệc để vào sân nhé, chat mâm số mấy để đổi bàn!",
+    "Kỷ niệm không bao giờ quên, chính là những bữa cơm như thế này đây!"
+  ],
+  "bond_full": [
+    "Mâm {table} tình nghĩa đong đầy rồi! Anh em mình đến với nhau bằng cái tình cảm mà!",
+    "Mâm {table} được sao thứ {stars} rồi! Cả sân vỗ tay cho mâm {table} nào!"
+  ],
+  "ev_chao_start": [
+    "Anh em nghe đây! Mình ăn bát cơm thì phải cho mình ăn bát cháo. Mâm nào chia cháo đủ cả mâm trước thì thắng nhé!"
+  ],
+  "ev_chao_win": [
+    "Mâm {table} giỏi quá! Đấy, tình nghĩa là phải thế, ai cũng có phần!",
+    "Mâm {table} chia cháo nhanh nhất! Anh em sống tình cảm thế này anh thích lắm!"
+  ],
+  "ev_chao_none": [
+    "Ơ chưa mâm nào chia đủ cháo à? Thôi lần sau anh em nhanh tay lên nhé!"
+  ],
+  "ev_pay_start": [
+    "Hoá đơn đến rồi đây! Ai trả? Ai muốn trả thì chạy lên quầy với anh!"
+  ],
+  "ev_pay_twist": [
+    "Ơ khoan! Hoá đơn này của mâm khác gửi nhầm! Thôi ngồi xuống hết, anh thanh toán rồi, không phải lo đâu em!"
+  ],
+  "ev_photo_start": [
+    "Nào cả nhà, chụp ảnh kỷ niệm nào! Ai muốn có tên trong ảnh thì chat chụp ảnh nhé!"
+  ],
+  "ev_photo_end": [
+    "Đẹp quá! {n} anh em trong một tấm ảnh. Kỷ niệm không bao giờ quên!"
+  ],
+  "ev_photo_none": [
+    "Không ai lên ảnh à? Thôi để lần sau vậy!"
+  ],
+  "praise_food": [
+    "{nick} khen ngon à? Gà luộc xé tay đấy em, ăn nhiều vào!",
+    "Ngon thì ăn nhiều vào {nick}, mâm cơm nhỏ nhưng làm bằng cả tấm lòng!"
+  ],
+  "ask_host": [
+    "{nick} hỏi khó anh thế! Thôi cứ ăn đi đã, chuyện đâu còn có đó!",
+    "Câu này để lát anh trả lời, giờ mâm {table} cứ ăn uống thoải mái nhé {nick}!"
+  ],
+  "ev_toast_start": [
+    "Đại hội anh em bốn bể khai mạc! Ai muốn lên phát biểu thì chat phát biểu nhé!"
+  ],
+  "toast_call": [
+    "Xin mời {nick} mâm {table} lên phát biểu!",
+    "Tiếp theo là {nick} từ mâm {table}, cả sân vỗ tay nào!"
+  ],
+  "toast_wish": [
+    "{nick} chúc anh em mâm {table} lúc nào cũng tình nghĩa đong đầy!",
+    "{nick} chúc cả sân năm châu bốn bể, ăn ngon ngủ kỹ, làm gì cũng thành công!",
+    "{nick} nói: anh em mình đến với nhau bằng cái tình cảm, cạn ly!"
+  ],
+  "ev_toast_end": [
+    "Đại hội bế mạc! Cảm ơn các diễn giả, cả sân vỗ tay nào!"
+  ],
+  "ev_toast_none": [
+    "Không ai phát biểu à? Anh sợ nhất là những người âm thầm không nói năng gì đấy!"
+  ],
+  "ev_old_start": [
+    "Mày thích giọng ông cụ không? Chat 1 là chuyện tình bạn, 2 là chuyện bữa cơm, 3 là chuyện ngày xưa!"
+  ],
+  "old_story_1": [
+    "Ngày xưa, ông có một thằng bạn. Nghèo lắm, nhưng có bát cơm là chia đôi.",
+    "Bạn bè ấy mà, lúc vui thì đông, lúc khó mới biết ai ở lại. Nhớ lấy nhé các cháu."
+  ],
+  "old_story_2": [
+    "Bữa cơm ngày xưa chỉ có rau muống luộc với bát nước chấm, thế mà cả nhà cười suốt.",
+    "Mâm cơm nhỏ thôi, nhưng ngồi đủ người, thế là hạnh phúc to rồi các cháu ạ."
+  ],
+  "old_story_3": [
+    "Ngày xưa ông đi bộ ba cây số đi học, về đến nhà là chạy ngay vào bếp xem có gì ăn.",
+    "Thời ấy làm gì có điện thoại, muốn gặp nhau là đạp xe sang tận nhà, thế mới quý."
+  ],
+  "ev_old_end": [
+    "Thôi, ông cụ đi nghỉ đây. Anh lại là anh của các em đây!"
+  ],
+  "quang_drop": [
+    "Quang đây! Gọi Quang có việc gì? Thôi, Quang đã nói thế rồi thì ok đi em!",
+    "Ai gọi Quang đấy? Mâm {table} vui thế này thì Quang ok hết!"
+  ],
+  "quang_intro": [
+    "Anh em đang cãi nhau à? Để anh gọi Quang ra phân xử!",
+    "Việc khó thế này phải hỏi Quang!"
+  ],
+  "quang_arrive": [
+    "Quang đến rồi đây! Để Quang nghe anh em bỏ phiếu đã.",
+    "Rồi rồi, Quang nghe hết rồi. Để Quang nghĩ một tí."
+  ],
+  "quang_verdict": [
+    "Quang chọn phe {side}: {answer}! Quang đã nói thế rồi thì ok đi em!",
+    "Phe {side}, {answer}! Quang đã nói thế rồi thì ok đi em!"
+  ],
+  "quang_host_agree": [
+    "Đấy, Quang nói chuẩn quá! Phe {side} được thưởng nhé!",
+    "Quang đã phán thì cả sân nghe theo! Phe {side} thắng!"
+  ],
+  "quang_host_twist": [
+    "Ơ, phe ít người mà Quang lại chọn! Thôi, Quang đã nói thế rồi thì ok đi em!",
+    "Bất ngờ chưa! Quang đứng về phe {side}. Anh cũng chịu Quang luôn!"
+  ],
+  "quang_none": [
+    "Không ai bỏ phiếu à? Thôi Quang chọn đại vậy!"
+  ],
+  "crowd_line": [
+    "Đông vui quá! Cả sân năm châu bốn bể về đây hết rồi!",
+    "Anh em đến với nhau bằng cái tình cảm, đông thế này anh cảm động lắm!",
+    "Từ từ thôi các em, mâm nào cũng có phần, không ai thiếu đâu!"
+  ],
+  "quiet_call": [
+    "{nick} ơi, vào đây ngồi mà không nói gì à? Anh sợ nhất là những người âm thầm đấy! Chat một câu cho anh vui nào!",
+    "{nick} mâm {table} ơi, ăn uống thế nào rồi? Nói chuyện với anh tí đi!"
+  ],
+  "headache_rest": [
+    "Anh ngồi nghỉ tí. Ai kể chuyện vui cho anh tỉnh lại thì chat kể chuyện nhé!"
+  ],
+  "headache_call": [
+    "Mời {nick} mâm {table} lên kể chuyện cho anh nghe!",
+    "{nick} kể đi, anh đang nghe đây!"
+  ],
+  "headache_wake": [
+    "Hay! Tỉnh cả người! Cảm ơn mâm {table} nhé!",
+    "Ha ha, buồn cười quá, hết đau đầu luôn! Mâm {table} được thưởng!"
+  ],
+  "headache_none": [
+    "Không ai kể à? Anh sợ nhất là những người âm thầm không nói năng gì cả. Thôi anh tự dậy vậy!"
+  ],
+  "ga_start": [
+    "Gà luộc xé tay đến rồi! Chat xé để xé gà về mâm mình. Nhớ chia cho đủ người nhé!"
+  ],
+  "ga_fair": [
+    "Mâm {table} chia gà công bằng nhất, ai cũng có phần! Tình nghĩa là phải thế!"
+  ],
+  "ga_greedy": [
+    "Mâm {table} ôm gà nhiều thế, ăn hết không đấy? Ha ha!"
+  ],
+  "ga_end": [
+    "Gà luộc xé tay phải chia đều, thế mới là tình nghĩa!"
+  ],
+  "chuc_ask": [
+    "Mâm {table} ơi, cho chú xin miếng gà với! Chú đói từ sáng đến giờ.",
+    "Chú ngồi ké tí thôi, mâm {table} có mời chú không?"
+  ],
+  "chuc_happy": [
+    "Mâm này hiếu khách quá! Chú cảm ơn nhé!",
+    "Ngon quá! Mâm {table} tốt bụng ghê!"
+  ],
+  "chuc_sad": [
+    "Thôi được rồi, chú sang mâm khác vậy...",
+    "Đuổi chú à? Chú đi đây, buồn ghê!"
+  ],
+  "chuc_next": [
+    "Sang mâm này xem có ai mời chú không nào!"
+  ],
+  "chuc_thanks": [
+    "Cả sân tốt với chú quá! Chú hát tặng cả sân một bài nhé! Tình tính tang tang tính tình!"
+  ],
+  "chuc_leave": [
+    "No rồi, chú về đây! Hôm sau chú lại sang!"
+  ]
+}

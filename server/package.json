@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "sim": "tsx watch src/index.ts --sim 40",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit -p .",
+    "test": "tsx --test \"src/**/*.test.ts\""
+  },
+  "dependencies": {
+    "tiktok-live-connector": "2.5.0",
+    "ws": "^8.18.0",
+    "msedge-tts": "2.0.9"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/ws": "^8.5.13",
+    "tsx": "^4.19.2",
+    "typescript": "~5.7.2"
+  }
+}

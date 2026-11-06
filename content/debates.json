@@ -1,0 +1,25 @@
+{
+  "_note": "Tranh cãi vui cho sự kiện 'Quang lên tiếng'. q = câu hỏi chủ tiệc nêu, a / b = 2 phương án (ngắn, 2–5 chữ). Thêm / sửa thoải mái.",
+  "debates": [
+    { "q": "Gà luộc chấm gì mới chuẩn?", "a": "Muối tiêu chanh", "b": "Nước mắm gừng" },
+    { "q": "Vào mâm thì làm gì trước?", "a": "Ăn cơm trước", "b": "Cụng ly trước" },
+    { "q": "Bát cơm đầu tiên phải xới thế nào?", "a": "Xới đầy", "b": "Xới vơi" },
+    { "q": "Nem rán ngon nhất là lúc nào?", "a": "Vừa rán xong", "b": "Để nguội tí" },
+    { "q": "Ăn cỗ thì ngồi đâu sướng nhất?", "a": "Gần nồi cơm", "b": "Gần đĩa gà" },
+    { "q": "Rau muống luộc chấm gì?", "a": "Nước mắm tỏi", "b": "Tương bần" },
+    { "q": "Mâm nào hát karaoke hay hơn?", "a": "Mâm chẵn", "b": "Mâm lẻ" },
+    { "q": "Canh chua phải chua đến mức nào?", "a": "Chua thanh", "b": "Chua gắt" },
+    { "q": "Ăn xong thì làm gì?", "a": "Uống trà", "b": "Ăn hoa quả" },
+    { "q": "Bánh chưng ăn với gì?", "a": "Dưa hành", "b": "Mật mía" },
+    { "q": "Đi ăn cỗ nên đến lúc nào?", "a": "Đến sớm", "b": "Đến đúng giờ" },
+    { "q": "Thịt gà ngon nhất là phần nào?", "a": "Đùi gà", "b": "Cánh gà" },
+    { "q": "Ăn phở có cho chanh không?", "a": "Có chanh", "b": "Không chanh" },
+    { "q": "Trà đá hay trà nóng sau bữa?", "a": "Trà đá", "b": "Trà nóng" },
+    { "q": "Xôi gấc hay xôi đỗ?", "a": "Xôi gấc", "b": "Xôi đỗ" },
+    { "q": "Mời cơm thì mời ai trước?", "a": "Người lớn tuổi", "b": "Khách mới đến" },
+    { "q": "Giò lụa thái thế nào?", "a": "Thái lát mỏng", "b": "Thái miếng dày" },
+    { "q": "Bữa cơm vui nhất khi nào?", "a": "Đông đủ cả nhà", "b": "Có bạn bè đến" },
+    { "q": "Ai rửa bát sau bữa?", "a": "Người ăn chậm nhất", "b": "Người ăn nhiều nhất" },
+    { "q": "Cơm nguội hay cơm nóng?", "a": "Cơm nóng", "b": "Cơm nguội rang" }
+  ]
+}

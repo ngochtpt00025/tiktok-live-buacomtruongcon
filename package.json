@@ -1,0 +1,22 @@
+{
+  "name": "bua-com-truong-con",
+  "private": true,
+  "version": "0.5.0",
+  "description": "Game TikTok LIVE 2D: Bữa Cơm Tình Nghĩa (parody)",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c yellow,cyan \"npm run dev -w server\" \"npm run dev -w client\"",
+    "sim": "concurrently -k -n server,client -c yellow,cyan \"npm run sim -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w client",
+    "test": "npm test -w server",
+    "live": "npm run build && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

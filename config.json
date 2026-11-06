@@ -1,0 +1,39 @@
+{
+  "port": 8787,
+  "tiktokUsername": "",
+  "hostName": "Anh Trường",
+  "venueName": "66B Ngõ Tình Nghĩa",
+  "speechPerMinute": 6,
+  "afkMinutes": 6,
+  "directorEnabled": true,
+  "eventGapSec": 120,
+  "joinRequiresCommand": true,
+  "tts": {
+    "provider": "edge",
+    "voice": "vi-VN-NamMinhNeural",
+    "rate": -8,
+    "pitch": -6
+  },
+  "voiceVolume": 90,
+  "ambience": true,
+  "ambienceVolume": 30,
+  "ai": {
+    "enabled": false,
+    "provider": "anthropic",
+    "model": "claude-haiku-5-5",
+    "baseUrl": "",
+    "maxCallsPerMinute": 20
+  },
+  "disclaimer": {
+    "show": true,
+    "text": "🎭 Parody giải trí · Nhân vật hư cấu, giọng nói do AI tạo · Không phải người thật"
+  },
+  "npc": {
+    "quangOnCall": true,
+    "chucEnabled": true,
+    "quangVoice": {
+      "rate": 10,
+      "pitch": 12
+    }
+  }
+}

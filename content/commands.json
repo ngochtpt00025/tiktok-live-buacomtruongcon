@@ -1,0 +1,152 @@
+{
+  "_note": "Pattern viết KHÔNG DẤU, chữ thường (comment được chuẩn hoá trước khi so). Thứ tự = độ ưu tiên. Regex JavaScript.",
+  "intents": [
+    {
+      "intent": "JOIN",
+      "patterns": [
+        "^(nhap|vao) ?tiec\\b",
+        "^nt$",
+        "^vao$",
+        "^join$"
+      ]
+    },
+    {
+      "intent": "MOVE_TABLE",
+      "patterns": [
+        "\\bmam ?(\\d{1,2})\\b",
+        "\\bban ?(\\d{1,2})\\b"
+      ]
+    },
+    {
+      "intent": "LEAVE",
+      "patterns": [
+        "^(ra ve|ve thoi|ve day|xin phep ve|bye)\\b"
+      ]
+    },
+    {
+      "intent": "VOTE_AB",
+      "patterns": [
+        "^(a|b)$",
+        "^phe (a|b)\\b",
+        "^chon (a|b)$"
+      ]
+    },
+    {
+      "intent": "TEAR",
+      "patterns": [
+        "^xe\\b",
+        "\\bxe ga\\b",
+        "\\bxe thit\\b"
+      ]
+    },
+    {
+      "intent": "STORY",
+      "patterns": [
+        "\\bke chuyen\\b",
+        "\\bke truyen\\b"
+      ]
+    },
+    {
+      "intent": "INVITE",
+      "patterns": [
+        "\\bmoi chu\\b",
+        "\\bchu an di\\b",
+        "\\bchu ngoi di\\b"
+      ]
+    },
+    {
+      "intent": "SHOO",
+      "patterns": [
+        "^duoi\\b",
+        "^di di\\b",
+        "\\bduoi chu\\b"
+      ]
+    },
+    {
+      "intent": "VOTE",
+      "patterns": [
+        "^[123]$",
+        "^(tinh ban|bua com|ngay xua)$"
+      ]
+    },
+    {
+      "intent": "TOAST",
+      "patterns": [
+        "\\bphat bieu\\b",
+        "\\bxin phep noi\\b",
+        "\\bnang ly chuc\\b"
+      ]
+    },
+    {
+      "intent": "CHAO",
+      "patterns": [
+        "\\bbat chao\\b"
+      ]
+    },
+    {
+      "intent": "PHOTO",
+      "patterns": [
+        "\\bchup anh\\b",
+        "\\bchup hinh\\b",
+        "\\bcheese\\b",
+        "\\bselfie\\b"
+      ]
+    },
+    {
+      "intent": "EAT",
+      "patterns": [
+        "\\ban com\\b",
+        "\\ban di\\b",
+        "\\bmoi ca nha\\b"
+      ]
+    },
+    {
+      "intent": "BEER",
+      "patterns": [
+        "\\b(mot|1) ?(hai|2) ?(ba|3) ?(zo|do|yo)\\b",
+        "\\bcan ly\\b",
+        "\\bcung ly\\b",
+        "\\bmoi anh\\b"
+      ]
+    },
+    {
+      "intent": "PAYMENT",
+      "patterns": [
+        "\\bthanh toan\\b",
+        "\\bai tra\\b",
+        "\\btra tien\\b",
+        "\\b(anh|em) tra\\b"
+      ]
+    },
+    {
+      "intent": "QUANG",
+      "patterns": [
+        "\\bquang\\b"
+      ]
+    },
+    {
+      "intent": "REQUEST_FOOD",
+      "patterns": [
+        "\\bhet com\\b",
+        "\\bchua co com\\b",
+        "\\bthem com\\b",
+        "\\bdoi qua\\b",
+        "\\bhet do an\\b"
+      ]
+    },
+    {
+      "intent": "GREET_HOST",
+      "patterns": [
+        "\\banh truong\\b",
+        "\\btruong oi\\b",
+        "\\bchao anh\\b"
+      ]
+    },
+    {
+      "intent": "OLD_VOICE",
+      "patterns": [
+        "\\bgiong ong cu\\b"
+      ]
+    }
+  ]
+}
